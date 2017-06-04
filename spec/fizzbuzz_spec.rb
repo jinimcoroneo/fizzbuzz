@@ -16,4 +16,8 @@ describe 'fizzbuzz' do
   it 'returns the number if it is not a multiple of 3 or 5' do
   	expect(fizzbuzz(4)).to eq 4
   end
+
+  it 'raises an error when the argument is not a number' do
+  	expect{ (fizzbuzz('string')) }.to raise_error(ArgumentError)
+  end
 end
